@@ -25,7 +25,13 @@
   <!--   <name>yarn.resourcemanager.address</name>                  -->
   <!--   <value>node2:8050</value>                                  -->
   <!-- </property>                                                  -->
+
   <property>
+    <name>yarn.resourcemanager.hostname</name>
+    <value>node2</value>
+  </property>
+
+  <!-- property>
     <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
     <value>0.95</value>
   </property>
@@ -44,5 +50,5 @@
   <property>
     <name>yarn.nodemanager.resource.memory-mb</name>
     <value>1024</value>
-  </property>
+  </property -->
 </configuration>
