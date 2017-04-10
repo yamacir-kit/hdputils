@@ -14,29 +14,17 @@
 -->
 <configuration>
   <property>
-    <name>
-      yarn.resourcemanager.hostname
-    </name>
-    <value>
-      node2
-    </value>
+    <name>yarn.resourcemanager.resource-tracker-address</name>
+    <value>node2:8025</value>
   </property>
 
   <property>
-    <name>
-      yarn.nodemanager.aux-services
-    </name>
-    <value>
-      mapreduce_shuffle
-    </value>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>node2:8035</value>
   </property>
 
   <property>
-    <name>
-      yarn.nodemanager.aux-services.mapreduce.shuffle.class
-    </name>
-    <value>
-      org.apache.hadoop.mapred.ShuffleHandler
-    </value>
+    <name>yarn.resourcemanager.address</name>
+    <value>node2:8050</value>
   </property>
 </configuration>

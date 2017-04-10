@@ -37,10 +37,13 @@ ssh-copy-id localhost
 echo "ssh" > rcmd_default
 sudo mv rcmd_default /etc/pdsh/
 
-hadoop_home="$install_prefix/hadoop"
-pushd $hadoop_home
-bin/hdfs namenode -format
-popd
+sudo mkdir -p /opt/hadoop/hdfs/namenode
+sudo mkdir -p /opt/hadoop/hdfs/datanode
+
+# hadoop_home="$install_prefix/hadoop"
+# pushd $hadoop_home
+# bin/hdfs namenode -format
+# popd
 
 echo ""
 echo "How to run a MapReduce job locally"

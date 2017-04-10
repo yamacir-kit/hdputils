@@ -18,29 +18,24 @@
 
 <configuration>
   <property>
-    <name>
-      dfs.secondary.http.address
-    </name>
-    <value>
-      http://node2:9868
-    </value>
+    <name>dfs.datanode.data.dir</name>
+    <value>/opt/hadoop/hdfs/datanode</value>
+    <final>true</final>
   </property>
 
   <property>
-    <name>
-      dfs.replication
-    </name>
-    <value>
-      2
-    </value>
+    <name>dfs.namenode.data.dir</name>
+    <value>/opt/hadoop/hdfs/namenode</value>
+    <final>true</final>
   </property>
 
   <property>
-    <name>
-      dfs.namenode.datanode.registration.ip-hostname-check
-    </name>
-    <value>
-      false
-    </value>
+    <name>dfs.namenode.http-address</name>
+    <value>node2:9870</value>
+  </property>
+
+  <property>
+    <name>dfs.replication</name>
+    <value>2</value>
   </property>
 </configuration>
