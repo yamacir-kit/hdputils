@@ -20,6 +20,7 @@ sudo chown -R pi:hadoop hadoop
 popd
 
 echo "export JAVA_HOME=`readlink -f /usr/bin/javac | sed -e 's:/bin/javac::'`" >> ~/.bashrc
+echo "export JAVA_HOME=`readlink -f /usr/bin/javac | sed -e 's:/bin/javac::'`" >> $install_prefix/hadoop/etc/hadoop/hadoop-env.sh
 echo "export HADOOP_HOME='/usr/local/hadoop'" >> ~/.bashrc
 echo 'export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin' >> ~/.bashrc
 
@@ -42,11 +43,12 @@ echo ""
 echo "How to run a MapReduce job locally"
 echo "  1. mv $hadoop_home"
 echo "  2. sbin/start-dfs.sh"
-echo "  3. bin/hdfs dfs -mkdir input"
-echo "  4. bin/hdfs dfs -put etc/hadoop/*.xml input"
-echo "  5. bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-$version.jar grep input output 'dfs[a-z.]+'"
-echo "  6. bin/hdfs dfs -cat output/*"
-echo "  7. sbin/stop-dfs.sh"
+echo "  3. bin/hdfs dfs -mkdir hdfs://localhost:9000/input"
+echo "  5. bin/hdfs dfs -mkdir -p hdfs://localhost:9000/output/grep"
+echo "  4. bin/hdfs dfs -put etc/hadoop/*.xml hdfs://localhost:9000/input"
+echo "  6. bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-$version.jar grep hdfs://localhost:9000/input hdfs://localhost:9000/output 'dfs[a-z.]+'"
+echo "  7. bin/hdfs dfs -cat output/*"
+echo "  8. sbin/stop-dfs.sh"
 
 echo ""
 echo "How to run a MapReduce job on YARN in a pseudo-distoributed mode"
