@@ -21,17 +21,5 @@
     <name>mapreduce.framework.name</name>
     <value>yarn</value>
   </property>
-  <property>
-    <name>mapreduce.application.classpath</name>
-    <value>$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/*:$HADOOP_MAPRED_HOME/share/hadoop/mapreduce/lib/*</value>
-  </property>
-  <!-- <property>                                             -->
-  <!--   <name>mapreduce.admin.user.env</name>                -->
-  <!--   <value>HADOOP_MAPRED_HOME=$HADOOP_COMMON_HOME</yarn> -->
-  <!-- </property>                                            -->
-  <!-- <property>                                             -->
-  <!--   <name>yarn.app.mapreduce.am.env</name>               -->
-  <!--   <value>HADOOP_MAPRED_HOME=$HADOOP_COMMON_HOME</yarn> -->
-  <!-- </property>                                            -->
 </configuration>
 
