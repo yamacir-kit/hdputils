@@ -30,12 +30,15 @@ ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
+sudo su
 echo "ssh" > /etc/pdsh/rcmd_default
+exit
 
 pushd $hadoop_home
 bin/hdfs namenode -format
 popd
 
+echo ""
 echo "How to run a MapReduce job locally"
 echo "  1. mv $hadoop_home"
 echo "  2. sbin/start-dfs.sh"
@@ -44,8 +47,8 @@ echo "  4. bin/hdfs dfs -put etc/hadoop/*.xml input"
 echo "  5. bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-$version.jar grep input output 'dfs[a-z.]+'"
 echo "  6. bin/hdfs dfs -cat output/*"
 echo "  7. sbin/stop-dfs.sh"
-echo ""
 
+echo ""
 echo "How to run a MapReduce job on YARN in a pseudo-distoributed mode"
 echo "  1. sbin/start-yarn.sh"
 echo "  2. Run a MapReduce job"
