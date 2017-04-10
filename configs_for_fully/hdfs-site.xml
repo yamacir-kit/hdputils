@@ -19,13 +19,13 @@
 <configuration>
   <property>
     <name>dfs.datanode.data.dir</name>
-    <value>/opt/hadoop/hdfs/datanode</value>
+    <value>file:///opt/hadoop/hdfs/datanode</value>
     <final>true</final>
   </property>
 
   <property>
-    <name>dfs.namenode.data.dir</name>
-    <value>/opt/hadoop/hdfs/namenode</value>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:///opt/hadoop/hdfs/namenode</value>
     <final>true</final>
   </property>
 
