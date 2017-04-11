@@ -19,9 +19,10 @@ sudo mv hadoop-$version hadoop
 sudo chown -R pi:hadoop hadoop
 popd
 
-echo "export JAVA_HOME=`readlink -f /usr/bin/javac | sed -e 's:/bin/javac::'`" >> ~/.bashrc
-echo "export JAVA_HOME=`readlink -f /usr/bin/javac | sed -e 's:/bin/javac::'`" >> $install_prefix/hadoop/etc/hadoop/hadoop-env.sh
+echo "export JAVA_HOME='/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre'" >> ~/.bashrc
+echo "export JAVA_HOME='/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre'" >> $install_prefix/hadoop/etc/hadoop/hadoop-env.sh
 echo "export HADOOP_HOME='/usr/local/hadoop'" >> ~/.bashrc
+echo "export HADOOP_COMMON_LIB_NATIVE_DIR=\"$HADOOP_HOME/lib/native\""
 echo 'export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin' >> ~/.bashrc
 
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
@@ -47,11 +48,11 @@ echo "  4. hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-$version.
 echo ""
 echo "How to run a MapReduce job on YARN in a pseudo-distoributed mode"
 echo "  1. cp $script_path/configs_for_pseudo/* $hadoop_home/etc/hadoop/"
-echo "  2. cd $hadoop_home"
-echo "  3. hdfs namenode -format"
-echo "  4. start-all.sh"
-echo "  5. hdfs dfs -mkdir -p /user/`id -un`"
-echo "  6. hdfs dfs -put etc/hadoop input"
+echo "  2. hdfs namenode -format"
+echo "  3. start-all.sh"
+echo "  4. hdfs dfs -mkdir -p /user/`id -un`"
+echo "  5. hdfs dfs -mkdir input"
+echo "  6. hdfs dfs -put $hadoop_home/etc/hadoop/*.xml input/"
 echo "  7. hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-$version.jar grep input output 'dfs[a-z.]+'"
 echo "  8. hdfs dfs -cat output/*"
 echo "  9. stop-all.sh"

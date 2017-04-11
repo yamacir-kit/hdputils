@@ -21,5 +21,68 @@
     <name>yarn.nodemanager.aux-services</name>
     <value>mapreduce_suffle</value>
   </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.env-whitelist</name>
+    <value>
+      JAVA_HOME,
+      HADOOP_COMMON_HOME,
+      HADOOP_HDFS_HOME,
+      HADOOP_CONF_DIR,
+      CLASSPATH_PREPEND_DISTCACHE,
+      HADOOP_YARN_HOME,
+      HADOOP_MAPRED_HOME
+    </value>
+  </property>
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.app.mapreduce.am.resource.mb</name>                                            -->
+  <!--   <!-- <value>1024</value> -->                                                              -->
+  <!--   <value>512</value>                                                                        -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.nodemanager.resource.cpu-vcores</name>                                         -->
+  <!--   <value>4</value>                                                                          -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.nodemanager.resource.memory-mb</name>                                          -->
+  <!--   <!-- <value>1024</value> -->                                                              -->
+  <!--   <value>512</value>                                                                        -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.scheduler.minimum-allocation-mb</name>                                         -->
+  <!--   <value>128</value>                                                                        -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.scheduler.maximum-allocation-mb</name>                                         -->
+  <!--   <!-- <value>1024</value> -->                                                              -->
+  <!--   <value>512</value>                                                                        -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.scheduler.minimum-allocation-vcores</name>                                     -->
+  <!--   <value>1</value>                                                                          -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.scheduler.maximum-allocation-vcores</name>                                     -->
+  <!--   <value>4</value>                                                                          -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>                          -->
+  <!--   <value>1</value>                                                                          -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.nodemanager.vmem-check-enabled</name>                                          -->
+  <!--   <value>false</value>                                                                      -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.nodemanager.vmem-pmem-ratio</name>                                             -->
+  <!--   <value>4</value>                                                                          -->
+  <!-- </property>                                                                                 -->
+  <!-- <property>                                                                                  -->
+  <!--   <name>yarn.nodemanager.disk-helth-checker.max-disk-utilization-per-disk-percentage</name> -->
+  <!--   <value>100.0</value>                                                                      -->
+  <!-- </property>                                                                                 -->
 </configuration>
 
