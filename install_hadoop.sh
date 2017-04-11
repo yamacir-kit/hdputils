@@ -37,8 +37,8 @@ ssh-copy-id localhost
 echo "ssh" > rcmd_default
 sudo mv rcmd_default /etc/pdsh/
 
-sudo mkdir -p /opt/hadoop/hdfs/namenode
-sudo mkdir -p /opt/hadoop/hdfs/datanode
+sudo mkdir -p /opt/hadoop/hdfs/namenode # master only (slaves unneed)
+sudo mkdir -p /opt/hadoop/hdfs/datanode # slaves only (master unneed)
 sudo chown -R pi:hadoop /opt/hadoop
 
 # hadoop_home="$install_prefix/hadoop"
