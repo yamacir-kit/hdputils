@@ -17,12 +17,10 @@
     <name>yarn.resourcemanager.resource-tracker-address</name>
     <value>node2:8025</value>
   </property>
-
   <property>
     <name>yarn.resourcemanager.scheduler.address</name>
     <value>node2:8035</value>
   </property>
-
   <property>
     <name>yarn.resourcemanager.address</name>
     <value>node2:8050</value>

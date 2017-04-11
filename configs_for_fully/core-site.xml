@@ -21,7 +21,6 @@
     <name>fs.default.name</name>
     <value>hdfs://node2:9000/</value>
   </property>
-
   <property>
     <name>fs.defaultFS</name>
     <value>hdfs://node2:9000/</value>

@@ -39,6 +39,7 @@ sudo mv rcmd_default /etc/pdsh/
 
 sudo mkdir -p /opt/hadoop/hdfs/namenode
 sudo mkdir -p /opt/hadoop/hdfs/datanode
+sudo chown -R pi:hadoop /opt/hadoop
 
 # hadoop_home="$install_prefix/hadoop"
 # pushd $hadoop_home
