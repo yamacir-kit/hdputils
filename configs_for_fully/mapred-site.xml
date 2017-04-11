@@ -35,7 +35,7 @@
   </property>
   <property>
     <name>yarn.app.mapreduce.am.command-opts</name>
-    <value>Xmx358m</value>
+    <value>-Xmx358m</value>
   </property>
   <property>
     <name>mapreduce.map.cpu.vcores</name>
@@ -51,7 +51,7 @@
   </property>
   <property>
     <name>mapreduce.map.java.opts</name>
-    <value>Xmx358m</value>
+    <value>-Xmx358m</value>
   </property>
   <property>
     <name>mapreduce.reduce.memory.mb</name>
@@ -59,7 +59,7 @@
   </property>
   <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>Xmx358m</value>
+    <value>-Xmx358m</value>
   </property>
   <property>
     <name>mapreduce.jobhistory.address</name>
