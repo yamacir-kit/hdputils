@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="3.0.3"
+version="3.1.0"
 
 script_path=$(cd "$(dirname $0)"; pwd)
 
@@ -20,9 +20,13 @@ sudo chown -R pi:hadoop hadoop
 popd
 
 echo "export JAVA_HOME='/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre'" >> ~/.bashrc
-echo "export JAVA_HOME='/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre'" >> $install_prefix/hadoop/etc/hadoop/hadoop-env.sh
 echo "export HADOOP_HOME='/usr/local/hadoop'" >> ~/.bashrc
-echo "export HADOOP_COMMON_LIB_NATIVE_DIR=\"$HADOOP_HOME/lib/native\""
+echo "export HADOOP_INSTALL=$HADOOP_HOME" >> ~/.bashrc
+echo "export HADOOP_MAPRED_HOME=$HADOOP_HOME" >> ~/.bashrc
+echo "export HADOOP_COMMON_HOME=$HADOOP_HOME" >> ~/.bashrc
+echo "export HADOOP_COMMON_LIB_NATIVE_DIR="$HADOOP_HOME/lib/native"" >> ~/.bashrc
+echo "export HADOOP_HDFS_HOME=$HADOOP_HOME" >> ~/.bashrc
+echo "export YARN_HOME=$HADOOP_HOME" >> ~/.bashrc
 echo 'export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin' >> ~/.bashrc
 
 ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa
