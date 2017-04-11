@@ -38,7 +38,11 @@
     <value>512</value>
   </property>
   <property>
-    <name>yarn.scheduler.opportunistic-container-allocation.enabled</name>
+    <name>yarn.resourcemanager.opportunistic-container-allocation.enabled</name>
     <value>true</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>1024</value>
   </property>
 </configuration>

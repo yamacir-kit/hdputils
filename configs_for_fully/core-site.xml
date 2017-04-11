@@ -22,7 +22,7 @@
     <value>hdfs://node2:9000/</value>
   </property>
   <property>
-    <name>fs.default.FS</name>
+    <name>fs.defaultFS</name>
     <value>hdfs://node2:9000/</value>
   </property>
 </configuration>
