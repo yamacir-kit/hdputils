@@ -25,4 +25,8 @@
     <name>yarn.resourcemanager.address</name>
     <value>node2:8050</value>
   </property>
+  <property>
+    <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
+    <value>0.9</value>
+  </property>
 </configuration>
