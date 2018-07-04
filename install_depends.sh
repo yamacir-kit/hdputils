@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo apt update && sudo apt -y upgrade && sudo apt autoremove
-
-sudo apt install openjdk-8-jdk
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove
+sudo apt install -y ssh openssh-server pdsh openjdk-8-jdk
 
